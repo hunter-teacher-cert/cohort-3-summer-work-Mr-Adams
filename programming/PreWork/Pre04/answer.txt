@@ -1,0 +1,26 @@
+(1)
+if(x > 0 && x < 10) {
+  System.out.println(""positive single digit number.");
+  }
+
+(2)
+(1)
+main [ , ]
+zoop [just for , 5]
+ping [not]
+clink [4]
+zoop [breakfast, 4]
+
+(2)
+just for
+any not more 
+It's breakfast 
+!
+
+(3)
+main [ ]
+nlines [4]
+nlines [3]
+nlines [2]
+nlines [1]
+nlines [0]

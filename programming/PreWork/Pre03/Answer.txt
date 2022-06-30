@@ -1,0 +1,14 @@
+(1)
+No, I wug.
+You wugga wug.
+I wug.
+
+(2)
+main []
+zoop []
+baffle []
+ping []
+(nothing would be in them since the methods have no parameters)
+
+(3)
+ping --> baffle --> ping --> baffle (It will loop forever) 

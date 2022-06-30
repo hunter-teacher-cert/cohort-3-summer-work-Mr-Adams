@@ -1,0 +1,12 @@
+(1)
+it is going to multiply each item in the array together to come up with one value.
+kiwi starts as 1 so the first item in the array is just multiplied by itself
+banana returns the single int value once all the multiplication is done
+(2)
+it will traverse the array and return the index of the array that equals the identified int value
+grape is the value that we are searching for in the array (this is the example for 8.6)
+(3)
+it goes through the array and tests each 'pine' in a and if pine equals apple you add one to pear and then returns the total items in the array that equal pear.
+apple is the int value we are counting in the array
+pear is the variable that holds the count
+pine is the variable the we are usign for each int in the array a.
