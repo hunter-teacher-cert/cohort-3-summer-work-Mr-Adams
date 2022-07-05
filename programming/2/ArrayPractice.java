@@ -24,13 +24,13 @@
    - buildRandomArray -- done
    - printArray -- done
    - arraySum -- done
-   - firstOccurence 
-   - findMaxValue
+   - firstOccurence -- done
+   - findMaxValue -- done
    Intermediate:
    Complete all the methods for basic and also
-   - buildIncreasingArray
-   - isSorted
-   - countOdds
+   - buildIncreasingArray -- done
+   - isSorted -- 
+   - countOdds -- 
    Advanced:
    Complete all the methods
 */
@@ -55,18 +55,13 @@ public class ArrayPractice
   public static int[] buildIncreasingArray( int size, int startValue, int step )
   {
     int[] data = new int[size];
-
-    //for l
-    // loop through each element of the array and
-    /* YOUR BRILLIANT CODE HERE */
-
-    // assign the appropriate value to each one.
-    /* YOUR BRILLIANT CODE HERE */
-
+    data[0] = startValue;
+      for(int i=0;i<data.length-1; i++){
+          data[i+1] = data[i] + step; 
+      }
+    
     return data;
   }
-
-
   /**
      Parameters:
      size - how many elements in the array
@@ -85,8 +80,6 @@ public class ArrayPractice
     }
     return data;
   }
-
-
   /**
      Parameters:
      data - an array of ints
@@ -103,9 +96,6 @@ public class ArrayPractice
     }
     System.out.println("");
   }
-
-
-
   /**
      Parameters:
      data - an array of integers
@@ -126,7 +116,6 @@ public class ArrayPractice
     // post condition: loop ended
     return data.length; 
   }
-
   /**
      Parameters: data - an array of ints
      Returns: an integer that is equal to the sum of all the elements in the array
@@ -142,8 +131,6 @@ public class ArrayPractice
     }
     return sum; // replace this
   }
-
-
   /**
      Parameters:
      data - an array of integers
@@ -156,12 +143,14 @@ public class ArrayPractice
   */
   public static boolean isSorted( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
-
-    return true; // replace this
-
+      for(int i =0;i<data.length-1; i ++) {
+          if (data[i] > data [i+1]){
+              return false;//if not sorted this is triggered and returns false
+          }
+      }
+    // this then runs and returns true if the false if test is not triggered
+    return true;
   }
-
   /**
      Parameters:
      data - an array of integers
@@ -169,14 +158,14 @@ public class ArrayPractice
      value of the largest element in the array
   */
   public static int findMaxValue( int[] data ) {
-    int m = 0;  // will hold the maximum value;
-
-    /* YOUR BRILLIANT CODE HERE */
-
-    return m;
+    int max = data[0];
+    for (int i = 1; i <data.length; i++){
+        if (data[i]>max){
+          max = data[i];
+        }
+    }
+      return max;
   }
-
-
   /**
      Parameters:
      data - an array of integers
@@ -208,9 +197,15 @@ public class ArrayPractice
      If the input array contains 5,8,13,7,27,2
      After the routine, the array will contain 2,27,7,13,8,5
   */
-  public static void flip( int[] data )
+  public static void flip( int[] data ) //refined from watching demo
   {
-    /* YOUR BRILLIANT CODE HERE */
+    int temp;
+      
+      for(int i =0; i<data.length/2; i++)
+      {
+          temp = data[i];
+          data[i] = data[data.length-1-i];
+          data [data.length -1 -i] = temp;
   }
 
 
@@ -236,8 +231,8 @@ public class ArrayPractice
       if(test == data.length){
           System.out.println("Value is not in the array or dataset");
       }
-    
-    // printArray(data2);
+    int[] data2 = buildIncreasingArray(5,5,5);
+    printArray(data2);
 
     // add calls to show that the methods you write work.
   }
