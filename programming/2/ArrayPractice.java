@@ -176,12 +176,15 @@ public class ArrayPractice
   */
   public static int countOdds( int[] data ) {
     int count = 0;
-
+    for(int i =0; i<data.length; i++)
+      {
+          if (data[i]%2=1){
+              count ++;
+          }
+      }
     /* YOUR BRILLIANT CODE HERE */
-
     // Note the % operator is the modulo (basically remainder) function
     // in java. Use to determine if an integer is odd.
-
     return count;
   }
 
