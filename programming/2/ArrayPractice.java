@@ -176,7 +176,7 @@ public class ArrayPractice
   */
   public static int countOdds( int[] data ) {
     int count = 0;
-    for(int i =0; i<data.length; i++)
+    for(int i =0; i<data.length-1; i++)
       {
           if (data[i]%2=1){
               count ++;
