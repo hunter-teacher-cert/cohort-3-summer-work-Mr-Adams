@@ -195,8 +195,21 @@ iterate (traverse) through first column and will change each box to X, then shif
      qqqXz
   */
    public static void explodeAllChar(char[][] board, char c)
-  {
-    /* YOUR AWESOME CODE HERE */
+  {  
+      //loops rows
+    for (int i=0; i<board.length; i++) 
+    {
+        //loops columns
+      for (int j=0; j<board[0].length; j++) 
+      {
+            //test if cell is equal to given character
+        if (board[i][j] == c) 
+        {
+          explodeSquare(board,i,j);//explodes the specific cell
+        }
+      }
+      
+    }
   }
 
 
@@ -243,7 +256,7 @@ iterate (traverse) through first column and will change each box to X, then shif
 
   public static void main( String[] args )
   {
-    char[][] b = buildBoard(10,10,'.');
+    char[][] b = buildBoard(10,10,'Q');
     printBoard (b);
     /*
       Note, you can directly set elements in the board
