@@ -14,7 +14,13 @@ public class Reverser
   */
   public static String reverseR( String s )
   {
-    /* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
+    int n = length.s;
+    char [] = length.s;
+    
+
+    
+    String temp = 
+    return s/* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
   }
 
 
