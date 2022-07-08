@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Time class by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
+ * Seth Adams
+ * collaborators: In group with Yanique, Harrison, and Taylor.  We did coding individually and shared what worked.
  */
 
 /**

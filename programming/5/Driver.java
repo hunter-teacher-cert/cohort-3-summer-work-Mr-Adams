@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Driver class for Time class  by Team LucidThinkeren
- * First Last
- * collaborators: First Last, First Last
+ * Seth Adams
+ * Collaborators: Yanique, Harrison, and Taylor
  */
 
 /**
