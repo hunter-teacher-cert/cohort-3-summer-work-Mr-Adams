@@ -96,17 +96,13 @@ public class Time {
     */
     public void add(Time other){
       int extraMins=0; int extraHours = 0;
-      int addSeconds = seconds + other.seconds;
-      if (addSeconds > 59){
-        extraMins = 1;
-        addSeconds = addSeconds-60;
-      }
-      int addMinutes = minutes + other.minutes + extraMins;
-      if (addMinutes > 59){
-        extraHours = 1;
-        addMinutes = addMinutes-60;
-      }
-      int addHours = hours + other.hours + extraHours;
+      int seconds = seconds + other.seconds;
+        extraMins = seconds / 60;//tests if there are more than 60 seconds using integer division
+        seconds = seconds % 60;//keeps the remaining seconds from mod division
+      int minutes = minutes + other.minutes + extraMins;
+        extraHours = minutes / 60; //tests if there are more than 60 mins using integer division
+        minutes = minutes % 60;//keeps the remaining mins from mod division
+      int hours = hours + other.hours + extraHours;
       
       
 	// add the code to add the time represented by other
@@ -125,9 +121,13 @@ public class Time {
     */
     public boolean equals(Time other){
 	// your code here)
-
-	return false; // change this
+      if(other.hours==hours && other.minutes==minutes && other.seconds == seconds){
+        return true;
+      } else {
+	    return false; // change this
+      }    
     }
+      
 
     /**
        Parameters:
