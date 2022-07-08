@@ -72,6 +72,7 @@ public class Rational
   // uses the most precise floating point primitive
   public double floatValue()
   {
+    //1.0*_numerator /_denominator will also convert this to a double. It's important that you multiply it by 1.0 first
     return (double)_numerator /_denominator;
 
   }
