@@ -47,7 +47,7 @@ public class Rational
   // if an invalid denominator is attempted, should print a message and set the number to 0/1
   public Rational( int n, int d )
   {
-    //this();calls the defualt constructor inside teh constructor
+    //this(); // calls the default constructor inside the constructor
     if (d == 0) {
       System.out.println("You cannot divide by 0! You have been defaulted.");
       _numerator = 0;
@@ -94,8 +94,14 @@ public class Rational
   // same as multiply, except operation is division
   public void divide( Rational r )
   {
-    _numerator *= r._denominator;
-    _denominator *= r._numerator;
+    if (r._numerator != 0){
+      _numerator *= r._denominator;
+      _denominator *= r._numerator;
+    }
+    else {
+      System.out.println ("Will not compute since invalid denominator of 0.");
+    }
+   
   }
 
 }//end class
