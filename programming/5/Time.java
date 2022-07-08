@@ -72,10 +72,10 @@ public class Time {
     /**
        returns a string representation of the time
     */
-    public String toString(){
-      String time = hours +":" + minutes + ":" + seconds;
-	    return time;
-    }
+  //from Java Fu Marieke Thomas, ALICIA WADE, @Moo Joon Park, Kate Maschmeyer to use formating
+     public String toString(){
+	  return(String.format("%02d:%02d:%02d", this.hours, this.minutes, this.seconds));
+  }
     /**
        Parameters:
        - hrs,mins,secs - ints representing a time
@@ -96,13 +96,14 @@ public class Time {
     */
     public void add(Time other){
       int extraMins=0; int extraHours = 0;
-      int seconds = seconds + other.seconds;
-        extraMins = seconds / 60;//tests if there are more than 60 seconds using integer division
-        seconds = seconds % 60;//keeps the remaining seconds from mod division
-      int minutes = minutes + other.minutes + extraMins;
-        extraHours = minutes / 60; //tests if there are more than 60 mins using integer division
-        minutes = minutes % 60;//keeps the remaining mins from mod division
-      int hours = hours + other.hours + extraHours;
+      seconds += other.seconds;
+      extraMins = seconds / 60;//tests if there are more than 60 seconds using integer division
+      seconds = seconds % 60;//keeps the remaining seconds from mod division
+      minutes = minutes + other.minutes + extraMins;
+      extraHours = minutes / 60; //tests if there are more than 60 mins using integer division
+      minutes = minutes % 60;//keeps the remaining mins from mod division
+      hours = hours + other.hours + extraHours;
+      hours = hours % 24;
       
       
 	// add the code to add the time represented by other
@@ -145,10 +146,18 @@ public class Time {
     */
     public int compareTo(Time other){
 	// your code here)
-
-	return 0; // change this
-    }
+      int totalSecs = (hours * 3600) + (minutes * 60) + seconds;
+      int totalOtherSecs = (other.hours * 3600) + (other.minutes * 60) + other.seconds;
+      if (totalSecs > totalOtherSecs){
+        return 1;
+      }
+      else if (totalSecs == totalOtherSecs) {
+        return 0;
+      } else {
+        return -1;
+      }
     
+    }
 
     
 }//end class

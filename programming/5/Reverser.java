@@ -12,21 +12,22 @@ public class Reverser
      precond:  input String is non-empty
      postcond: returns input String with chars in reverse order
   */
-  public static String reverseR( String s )
-  {
+//   public static String reverseR( String s )
+//   {
 
-  }
+//   }
 
 
-  public static void main( String[] args )
-  {
-    System.out.println( reverseR("odd") );
-    System.out.println( reverseR("even") );
-    System.out.println( reverseR("abcdefg") );
-    System.out.println( reverseR("stressed") );
-    System.out.println( reverseR("amanaplanacanalPanama") );
+//   public static void main( String[] args )
+//   {
+//     System.out.println( reverseR("odd") );
+//     System.out.println( reverseR("even") );
+//     System.out.println( reverseR("abcdefg") );
+//     System.out.println( reverseR("stressed") );
+//     System.out.println( reverseR("amanaplanacanalPanama") );
 
-    //more tests welcome
-    // got some good palindromes?
-  }
+//     //more tests welcome
+//     // got some good palindromes?
+//   }
+// }
 }
