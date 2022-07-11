@@ -108,7 +108,7 @@ public class SuperArray
   public String toString()
   {
      String arrayString = "[ ";
-     for (int i = 0 ; i < data.length; i++) {
+     for (int i = 0 ; i < numberElements; i++) {
             arrayString += data[i] + " ";
           }
     arrayString += "]";
@@ -133,9 +133,17 @@ public class SuperArray
 
   public void remove(int index)
   {
+    
     // shift items down to remove the item at index
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    if(index>numberElements-1){
+      System.out.println("Index to delete does not hold meaningful data");
+    } else {
+      for (int i = index+1 ;i < numberElements; i++){
+      data[i-1]=data[i];
+      }
+    numberElements --;
+    }
     // subtract fom numElements;
     /* YOUR SIMPLE+SMART CODE HERE */
   }
@@ -143,20 +151,21 @@ public class SuperArray
 
   public void add(int index, int value)
   {
-    // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
-
-    // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
-
-    // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
-
-    // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if (numberElements == data.length){
+      grow();
+    }
+    if(index>data.length-1){
+      System.out.println("Index is out of bounds.");
+    } else {
+      for (int i = numberElements; i > index; i--){
+      data[i]=data[i-1];
+    }
+    data[index] = value;
+    numberElements++;
+    }
   }
 
-
+  
   private void grow()
   {
     int[] tempArray = new int [data.length + 5];//create a temporary array to copy over data from original
