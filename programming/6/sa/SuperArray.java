@@ -154,7 +154,7 @@ public class SuperArray
     if (numberElements == data.length){
       grow();
     }
-    if(index>data.length-1){
+    if(index>numberElements-1){
       System.out.println("Index is out of bounds.");
     } else {
       for (int i = numberElements; i > index; i--){
