@@ -57,9 +57,9 @@ public class AlPractice
   public static int sumOfList(ArrayList<Integer> dataList)
   {
     int sum = 0;
-    for (int i = 0; i < dataList.size(); i++)
+    for (int i = 0; i < dataList.size(); i++)//loops through
     {
-      sum = sum + dataList.get(i);
+      sum = sum + dataList.get(i);//adds each value in the indexes 
     }
     return sum;//placeholder to compile.
   }
@@ -78,9 +78,9 @@ public class AlPractice
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2)
   {
-    int temp1 = dataList.get(index1);
-    dataList.set(index1,dataList.get(index2));
-    dataList.set(index2,temp1);
+    int temp1 = dataList.get(index1);//makes a temp variable to take index 1 value
+    dataList.set(index1,dataList.get(index2));///this gets the data at index 2 and enters it at index 1
+    dataList.set(index2,temp1);//takes temp value and enters it at index 2
   }
   
   /**
@@ -92,12 +92,11 @@ public class AlPractice
   */
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
   {
-    for(int i = 0; i < dataList.size(); i ++){
+    for(int i = dataList.size()-1; i > 0; i --){
       if (dataList.get(i)==valueToRemove){
         dataList.remove(i);
       }
     }
-
   }
 
 
@@ -112,7 +111,7 @@ public class AlPractice
   Postconditions:
   - The parameter ArrayLists should not be modified.
   */
-  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
+  /*public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
   {
     ArrayList<Integer> totals = new ArrayList<Integer>();
     int sumOfListA = sumOfList(ListA);
@@ -120,6 +119,14 @@ public class AlPractice
     totals.add(sumOfListA);
     totals.add(sumOfListB);
     return totals;//placeholder to compile.
+  } Coded by partner Sam.  My attempt is below*/
+  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
+  {
+    ArrayList<Integer> totals = new ArrayList<Integer>();
+    for(int i = 0, j = 0; i < ListB.size(); i ++, j ++){
+      totals.add(ListA.get(i) + ListB.get(j));
+    }
+    return totals;
   }
 
   /** zipLists
@@ -132,11 +139,11 @@ public class AlPractice
   Postconditions:
   - The parameter ArrayLists should not be modified.
   */
-  // public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
-  // {
+  public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
+  {
     
-  //   return null;//placeholder to compile.
-  // }
+    return null;//placeholder to compile.
+  }
 
   public static void main(String[] args)
   {
@@ -148,6 +155,7 @@ public class AlPractice
     al = buildRandomList(10,100);
     al2 = buildRandomList(10,100);
     System.out.println(al);
+    System.out.println(al2);
     System.out.println(sumOfList(al));
     swapElements(al,1,2);
     System.out.println(al);
@@ -164,13 +172,18 @@ public class AlPractice
     al.set(2,5);
     al.set(3,5);
     System.out.println(al);
-    // removeValue(al,5);
+    System.out.println("Remove test of value 5.");
+    removeValue(al,5);
     System.out.println(al);
 
     //inserting the sums of lists A and B into
     //the sumList arrayList
-
-    sumOfAls = sumLists(al,al2);
-    System.out.println("The sums of al and al2 are " + sumOfAls.get(0) + " and " + sumOfAls.get(1));
+    System.out.println("");
+    System.out.println("");
+    System.out.println("List A is: " + al);
+    System.out.println("List B is: " + al2);
+    System.out.println(" The sum array is: " + sumLists(al,al2));
+    // sumOfAls = sumLists(al,al2);
+    // System.out.println("The sums of al and al2 are " + sumOfAls.get(0) + " and " + sumOfAls.get(1));
   }
 }
