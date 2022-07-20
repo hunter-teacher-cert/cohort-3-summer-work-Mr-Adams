@@ -1,0 +1,43 @@
+Team TBD Room 6
+-Dummies guide to...
+  Two point directions
+  Be computer
+-Algorithm How to Guide
+-Peanut Butter - Volatron Robot
+
+
+-Teamwork: groups 4
+stacks of paper
+build structure to hold textbook
+
+-Packets (internet)
+  -everyone was comp
+  -send a message to another comp
+  -find a route through multiple people
+  -people would intercept packet
+  -part of a message in each packet
+
+-message or name--binary conversion and color page with analog to digital and hexidecimal -great break-
+
+-flippy do-
+
+-envelopes for variables
+-Variable swithiching around-what variables equal what--switching of variables can happen a lot
+
+Good CS movies:
+-The Martian and 
+-Immitation Game
+
+
+-maze practice with partner/team what was the correct line. who had correct code
+
+each kid has role/method- gets the info and then tests it-plays a part in the program!
+
+Conditionals Activity-(can also use it to see variables)
+  *baggies hold values
+  *start with something filling in the bags
+  *Variable (may have more)-baggie holds value
+  *what each what holds and test
+  *is that test true or false
+  *Input and outcome --if this is true what happens if this false what happens
+  

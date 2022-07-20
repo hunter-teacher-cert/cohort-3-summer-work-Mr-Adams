@@ -93,14 +93,16 @@ public class SortSearch{
     */
     public void sort(){
       //some if loop and then if true we would shift start up one -- replace value from lowest index with current test index (will need temp placeholder variable??)
-      //oh I thought that was what I was calling sethsVal but nevermind. HMM. Im just thinking through this.
+
       int smallIndex = 0;
       int tempInt = 0;
-      for(int i = 0/*this is the start*/;i < data.size();i++){ //this is like the j loop and start always moves up with the loop
-        smallIndex = findSmallestIndex(i); //find smallest index starting at 0
+      for(int i = 0/*this is the start*/;i < data.size();i++){ //this is like the j loop and start always moves up with the loop - no need to do a search loop because we already have a search method from find smallest 
+        smallIndex = findSmallestIndex(i); //find smallest index starting at 0 ( from find smallest method)
         tempInt = data.get(smallIndex); //temporary variable to hold the smallest int index while looping through
         data.set(smallIndex, data.get(i)); //set index to looped data from start point
         data.set(i, tempInt); //that data now becomes the temp
+
+        //rinse and repeat!
       }
     }
 
