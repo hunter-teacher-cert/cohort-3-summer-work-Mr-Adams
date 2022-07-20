@@ -77,7 +77,7 @@ public class SortSearch{
   public int findSmallestIndex(int start){//created method called findSmallestIndex w/parameter of start
   	int smallIndex = start; //smallIndex is start
   	for(int i=start; i <data.size(); i++){//loop starting at start parameter, increments up until start is less then the size of array
-      if(data.get(smallIndex) > data.get(i)){//if the data at start is greater than the data of the small index  (steven or seth this part I am a bit confused onhow to interpret this in english) 
+      if(data.get(i) < data.get(smallIndex)){//if the data at the index we are checking is less than the data at our current smallest index then we replace the smallIndex with that index
         smallIndex = i;
       }
     }
@@ -86,22 +86,25 @@ public class SortSearch{
 
 
     /**
-       Implement the selection sort algorithm by sorting the ArrayList
-       data in place.
-
+       Implement the selection sort algorithm by sorting the ArrayList data in place.
        Algorithm:
-       Loop a variable that represents the ArrayList index from
-       0 to the end of the ArrayList.
-         For each index, find the smallest from that Location
-	 to the end of the array and swap it with that index.
-
-	 
-       
-
+       Loop a variable that represents the ArrayList index from 0 to the end of the ArrayList.
+         For each index, find the smallest from that Location to the end of the array and swap it with that index.
     */
     public void sort(){
-
-
+      //some if loop and then if true we would shift start up one -- replace value from lowest index with current test index (will need temp placeholder variable??)
+      //oh I thought that was what I was calling sethsVal but nevermind. HMM. Im just thinking through this.
+      int smallIndex = 0;
+      int tempInt = 0;
+      for(int i = 0/*this is the start*/;i < data.size();i++){ //this is like the j loop and start always moves up with the loop
+        smallIndex = findSmallestIndex(i); //find smallest index starting at 0
+        tempInt = data.get(smallIndex); //temporary variable to hold the smallest int index while looping through
+        data.set(smallIndex, data.get(i)); //set index to looped data from start point
+        data.set(i, tempInt); //that data now becomes the temp
+         smallIndex = tempInt;
+        //int value = data.get(i);
+        //for(j=i)
+      }
     }
 
 
