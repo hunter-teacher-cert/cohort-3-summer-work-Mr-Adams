@@ -14,18 +14,18 @@ Part 1:  (BASIC)
   the behavior of the constructors.
 
   Part 2: (BASIC)
-  1. Read the description of findSmallestIndex and complete the method.
-  2. Uncomment the lines in SortProjectDriver to test.
+✔️ 1. Read the description of findSmallestIndex and complete the method.
+✔️2. Uncomment the lines in SortProjectDriver to test.
 
   Part 3: (INTERMEDIATE)
-  1. Complete the sort method - read comments for description
-  2. Uncomment the lines in sortProjectDriver to test.
+✔️  1. Complete the sort method - read comments for description
+✔️  2. Uncomment the lines in sortProjectDriver to test.
 
 
 
 Search Project:
   1. Complete the linear search (BASIC)
-  2. Complete the binary search (Intermediate)
+  2. Complete the binary search (Intermediate)//can't binary search on a non sorted list
   3. Complete the recursive version of binary search (Advanced)
 */
 
@@ -101,9 +101,6 @@ public class SortSearch{
         tempInt = data.get(smallIndex); //temporary variable to hold the smallest int index while looping through
         data.set(smallIndex, data.get(i)); //set index to looped data from start point
         data.set(i, tempInt); //that data now becomes the temp
-         smallIndex = tempInt;
-        //int value = data.get(i);
-        //for(j=i)
       }
     }
 
