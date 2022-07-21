@@ -25,6 +25,7 @@ Would need to know: for loops, while loops, conditionals, return/void methods, d
 ### Go!
 1. Do Now (Size Ordering)
     - Have 10 volunteers to be data (of different heights) and stand in random order.
+    - Can have 1 or 2 students to test the code to sort students (students cannot necessarily see the whole list, i.e. testing each option)
     - Have remaining students figure out how to sort them in height order from the first to last person (short -> tall)
 1. Explain that they will use their code snippets to make an algorithm to sort an array in Java.
 1. Students work in small groups(2-3) to create their algorithm.
