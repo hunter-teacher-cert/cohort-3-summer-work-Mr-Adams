@@ -57,6 +57,16 @@ public class SortSearch{
 	
     }//override constructor makes an ArrayList with parameter size filled with randomized Ints between 0-19 
 
+  
+  // make orderd arrayList for testing
+  public SortSearch(int size, boolean ordered){
+	data = new ArrayList<Integer>(size);
+		for (int i=0;i<size;i++){
+	    data.add(i);
+	}
+}
+
+  
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
 	return this.data.get(index);
@@ -120,28 +130,47 @@ public class SortSearch{
        This algorithm works on any ArrayList.
 
     */
-    public int linearSearch(int value){
-	
-	
-	return 0; // replace this return
+  public int linearSearch(int value){
+	 for(int i = 0; i < data.size(); i++)/*loops through each element and tests each for the value and returns the index if there is a match*/
+   {
+      if(data.get(i) == value)
+      {
+        return i;
+      }
     }
+	    return -1; 
+  }
+	
     
     /**
        Implement a binary search as specified by the comments
        
        This algorithm only works on sorted ArrayLists.
     */
-    public int binarySearch(int value){
-
-	// create assign variables  representing the high, low and middle indices 
-	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
-
-	return 0;
+    public int binarySearch(int value)
+    {
+      int high = data.size() -1;
+      int low = 0;
+      int middle;
+      while (high >= low)
+        {
+          middle = (high+low)/2;
+          if (data.get(middle)==value)
+            {
+		          return middle;
+	          } else if (data.get(middle) > value)
+              {
+		            high = middle - 1;
+	            } else 
+                {
+                  low = middle + 1;
+	              }
 	    
+		    }
+	    return -1;
     }
-    
+      
+  
     /**
        Implement a RECURSIVE binary search as specified by the comments
        
@@ -149,12 +178,22 @@ public class SortSearch{
     */
 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
-
-	// refer to class discussion
-	
-	return 0;
-	    
+      if (lowIndex>highIndex){
+        return -1;
+      }
+      int middle = (lowIndex + highIndex) / 2;
+      if (data.get(middle)==value)
+        {
+	        return middle;
+	      } else if (data.get(middle) > value)
+          {
+	          return binarySearchRecursive(value,lowIndex,middle-1);
+	        } else 
+            {
+	            return binarySearchRecursive(value,middle+1,highIndex);
+	          }
     }
+
     
 	
     public String toString(){
