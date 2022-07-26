@@ -1,0 +1,41 @@
+First Last
+Methods Summer 2022
+GALLERY TOUR LOG
+
+
+USAGE OF TOP SECTION: 
+====================================================
+DISCOVERIES:
+* any cool tips/tricks/hacks you learned
+* 1 per line, please
+* From Amanda Lee: to make check boxes - [x] vs [ ]
+* From Yenmin: Insert pictures as so <image URL> 
+* ``` creates code black and ``` closes it.
+
+LINGERING QUESTIONS:
+* 1 per line, please
+* how to add more style and interactivity
+* can I modify layout of template or webpage
+
+COMMENTS/CONCERNS/OTHER:
+* 1 per line, please
+====================================================
+
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site:
+URL
+notable aspect:
+what is cool about this site
+-------------------------------------
+notable site:
+https://usman0527.github.io/nycscertweb/
+notable aspect:
+Love the different format to use with the headings
+-------------------------------------
+notable site:
+https://amanewei.github.io/nycscertweb/
+notable aspect:
+Check boxes and GIFs
