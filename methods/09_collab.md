@@ -12,7 +12,9 @@ This would likely be an earlier lesson where I am going to introduce driver/navi
 I know I will need this as a prodedure for the year to ensure strong and meaningful partner work for the year.
 This would be introduce in their first game coding experience after some learning in the system:
 ## Activity: Code a Game
+
 ### Task: Develop a single player game against some computer actor that could be made multiplayer 
+
 ### Roles and Responsibilities
 * Navigator
   * Has the doc open
@@ -26,3 +28,21 @@ This would be introduce in their first game coding experience after some learnin
   * Think in collaboration with Navigator
   * Receive input from Navigator on what to code
   * Debug and test code
+
+### Directions for Students
+* Develop a simple game that one person can play
+* Play against a computer in some form
+* Having score keeping
+* Have a losing condition
+* Should be able to be multiplayer eventually
+
+### Deliverable
+* Navigator
+  * Annotated Directions
+  * Psuedocode and/or Diagraming
+  * Response Questions
+  * URL to Code
+* Driver
+  * Screen Grabs/Recording
+  * Commenting Code
+  * URL to Code

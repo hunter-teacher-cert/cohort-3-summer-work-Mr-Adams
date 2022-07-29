@@ -1,3 +1,22 @@
 language = "bash"
-run = ""
+run = "cd ds/stacksqueues; javac *java; java Driver"
 
+#"cd ds/trees; javac *java; java TreeDriver"
+
+#"cd ds/sorting; javac *java; java SortSearchDriver"
+
+#"cd ds/linkedlist; javac *java; java Driver"
+
+#"cd ds/sorting; javac *java; java SortSearchDriver"
+
+#run = "cd ds/sorting; javac *java; java SortSearchReferenceDriver"
+
+#"cd ds/pointers; javac Driver.java Node.java; java Driver"
+
+#"cd programming/pre/8; javac *java; java Craps 8"
+
+#"cd ds/arraylists; javac *java; java AlPractice"
+
+#"cd programming/pre/8; javac *java; java Craps 8""
+
+#"cd programming/6/sa; javac *java; java SuperArrayDriver"
